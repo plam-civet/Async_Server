@@ -1,0 +1,14 @@
+set(RegistryCoreFiles
+	${CMAKE_SOURCE_DIR}/RegistryCore/RegistryCore.cpp
+	${CMAKE_SOURCE_DIR}/RegistryCore/RegistryCore.h
+)
+
+add_executable(RegistryCore
+	${RegistryCoreFiles}
+)
+#target_link_libraries依赖什么库
+target_link_libraries(RegistryCore
+	ZmqNetwork
+	proto_lib
+	#protobuf::libprotobuf
+)
